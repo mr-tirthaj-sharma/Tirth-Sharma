@@ -1,41 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password</title>
-    <style>
-        #boot{
-            color: ghostwhite;
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <meta name="author" content="Techeonn,niikhiljha@gmail.com Delhi">
+
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <link rel="apple-touch-icon-precomposed" href="./public/1.png">
+    <meta name="format-detection" content="telephone=no">
+    <title>Happy Valentines Day</title>
+    <style type="text/css">
+        body {
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+            font-size: 25px;
+            color: #FFF;
+            font-family: "微软雅黑";
+            background: #ae10ed;
         }
-        button {
-            align-content: center;
+        div {
+            text-align: left;
+        }
+        .tittle {
+            width: 100%;
+            background: #ae10ed;
+            top: 0px;
+            height: 100%;
+            z-index: 0;
+            position: absolute;
+            position: fixed !important;
+            display: none;
+            cursor: default;
         }
 
-        body {
-            background-color: rgb(0, 0, 0);
+        .big {
+            font-family: "微软雅黑";
+            color: #FFF;
+            font-size: 35px;
+        }
+        .tishi {
+            position: absolute;
+            position: fixed !important;
+            z-index: 99;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .tishiContent {
+            border: 1px solid #FFF;
+            font-size: 18px;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 5px;
         }
     </style>
+    <script type="text/javascript" src="./jscss/jquery.min.js"></script>
+    <script>
+        $(document).ready(function (e) {
+            $(document).scrollTop(300);
+            
+            timer = setInterval("$.change()", 3000);
+            t = 2;
+            $("#t-" + t).fadeIn();
+            $(document).click(
+                    function () {
+                        
+                        clearInterval(timer);
+                        $.change();
+                    }
+            );
+
+           
+            $.change = function () {
+                t++;
+                if (t <= $(".tittle").length) {
+                    $(".tittle").slideUp(1500).fadeOut();
+                    $("#t-" + t).slideDown(1500).fadeIn();
+                } else {
+                    localStorage["index"] = "1";
+                    window.location = "index2.html";
+                }
+            }
+        });
+    </script>
+
 </head>
 
 <body>
-    <div>
-        <h1 hidden; align="center">THIS IS HEADING</h1>
-        <h1 hidden; align="center">THIS IS HEADING</h1>
-        <h1 hidden; align="center">THIS IS HEADING</h1>
-        <h1 hidden; align="center">THIS IS HEADING</h1>
-        <h1 hidden; align="center">THIS IS HEADING</h1>
+<section style="text-align: center">
+    <div class="tittle" id="t-1" style="display: none;">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center"><span class="big">Heyy</span>Love🥰</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 
-    <script>
-        var a = prompt("Enter your password");
-        if (a == 2007) {
-            document.write("<div align='center'><button align='center'><a href='mainwebsite.html'> click me</a></button></div>")
-        } else {
-            document.write("<div id='boot'align='center'>Entered passoword is wrong</div>")
-        } 
-    </script>
-</body>
+    <div class="tittle" id="t-2" style="display: block;">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center"><span class="big">you </span>Know what</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
+    <div class="tittle" id="t-3" style="">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center">youuuuuu！<span class="big">areeeee·······</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+   <div class="tittle" id="t-4" style="">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center">sooo··<span class="big">special</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="tittle" id="t-5" style="">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center"><br>
+                    <span class="big">for me...</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tittle" id="t-6" style="">
+        <table width="100%" border="0" height="100%">
+            <tbody>
+            <tr>
+                <td align="center"><br>and today <span class="big">is something special so click to see something🤫</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</section>
+<div align="center" class="tishi">
+    <span class="tishiContent">click me👀</span>
+</div>
+</body>
 </html>
